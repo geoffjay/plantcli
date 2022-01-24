@@ -1,3 +1,31 @@
+[tool.poetry]
+name = "plant"
+version = "0.1.0"
+description = "Plantd CLI for interacting with connected devices"
+license = "MIT"
+authors = ["Geoff Johnson <geoff.jay@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+plant = "main:patched_main"
+
+[tool.poetry.dependencies]
+PyGObject = "^3.38.0"
+click = "^8.0.3"
+python = "^3.8"
+rich = "^11.0.0"
+
+[tool.poetry.dev-dependencies]
+PyGObject-stubs = "^0.0.2"
+black = "^20.8b1"
+isort = "^5.10.1"
+pre-commit = "^2.10.1"
+pytest = "^6.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.black]
 line-length = 120
 target-version = ['py36', 'py37', 'py38']
@@ -22,26 +50,3 @@ known_first_party = [ "tests" ]
 include_trailing_comma = true
 order_by_type = false
 skip = [ "bin" ]
-
-[tool.poetry]
-name = "plant"
-version = "0.1.0"
-description = "Plantd CLI for interacting with connected devices"
-authors = ["Geoff Johnson <geoff.jay@gmail.com>"]
-
-[tool.poetry.dependencies]
-python = "^3.8"
-PyGObject = "^3.38.0"
-click = "^8.0.3"
-rich = "^11.0.0"
-isort = "^5.10.1"
-
-[tool.poetry.dev-dependencies]
-black = "^20.8b1"
-pre-commit = "^2.10.1"
-pytest = "^6.2.4"
-PyGObject-stubs = "^0.0.2"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"

@@ -1,4 +1,9 @@
 from plant.cli import cli
 
-if __name__ == "__main__":
+
+def patched_main():
     cli()
+
+
+if __name__ == "__main__":
+    patched_main()
