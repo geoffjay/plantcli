@@ -24,9 +24,9 @@ order_by_type = false
 skip = [ "bin" ]
 
 [tool.poetry]
-name = "plantcli"
-version = "0.0.0"
-description = ""
+name = "plant"
+version = "0.1.0"
+description = "Plantd CLI for interacting with connected devices"
 authors = ["Geoff Johnson <geoff.jay@gmail.com>"]
 
 [tool.poetry.dependencies]

@@ -10,6 +10,8 @@ compile_commands.json
 __pycache__
 
 _build*/
+dist/
+
 .idea/
 .vscode/
 
